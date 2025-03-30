@@ -13,7 +13,7 @@ void Armstrong(int n)
     while (temp > 0)
     {
         temp /= 10;
-        num_digits++;
+        num_digits++; //jitna baar 10 se divide hoga utna baar num_didit counter badhega
     }
 
     // Calculate the Armstrong sum
