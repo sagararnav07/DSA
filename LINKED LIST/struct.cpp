@@ -20,7 +20,7 @@ struct Node{
         data = data1;
         next = nullptr;
     }
-};\
+};
     int main()
     {
         vector<int> arr = {1,4,5,6,7,8,9};
