@@ -18,9 +18,12 @@ by "cout << &ptr << endl;"
 5. Double pointer :- Double pointer or pointer to pointer is a concept in which another pointer variable stores the 
 memory location of the first pointer for i.e taking above example of ptr
   int** Dptr = &ptr; like this
+
+6."*" :- it is called star or deference operator which is used to get the value at a given address 
+calue ko nikalne ke lie use hota h 
 */
 int main()
-{
+{   //1.
     int a =10;
     cout << &a << endl; // output: "0x61ff0c"
     
@@ -28,17 +31,36 @@ int main()
     int* ptr = &a;
     cout << ptr << endl; // output: "0x61ff0c"
     
+    //2.
     //pointers works in any data type
     float b = 10.7563;
     float* ptr2 = &b;
     cout << ptr2 << endl;
-
+     
     //let's see the memory location of the pointer variable that stores the data
     cout << &ptr << endl;
     cout << &ptr2 << endl;
 
-    //double pointer
 
+    //3.
+    //double pointer
     int** D_ptr = &ptr;
     cout << "the double pointer value is:-" << D_ptr << endl;
+
+    
+    //Defrencing -> to extract value store at a memory locaton or derefrencing it, * -> this is called both star as well as derefrencing operator
+    cout << "value of 1 :-" << *ptr << endl; //defrencing -> getting value inside the pointer  //output:-10
+    cout << "value of 2 :-" <<**D_ptr << endl; //ouput 10;
+    cout << "value of 3 :-" <<*ptr2 << endl; //output 10.7563
+    cout << *(&a) << endl; //ouput 10; 
+
+    //Triple pointer not used basically anywhere 
+    int*** X_ptr = &D_ptr;
+    cout << "triple pointer" << ***X_ptr << endl;
+
+    /* NULL POINTER :- a pointer variable that does not point to a memory location is called null pointer
+    Iksa use mostly Linked list aur Trees me hi hota hai, for i.e hume nahi pata the last node kisko point kar 
+    raha h to usko humlog nullptr assign kar dete hai*/
+
+    
 }
